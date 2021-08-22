@@ -9,13 +9,22 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: ${{d0091e87-9a43-479e-9762-5a39c6ad2ed7}}
-          heroku_app_name: ${{akeno-mirrorbot}}
-          heroku_email: ${{hakeno217@gmail.com}}
+          heroku_api_key: ${{secrets.d0091e87-9a43-479e-9762-5a39c6ad2ed7}}
+          heroku_app_name: ${{secrets.akeno-mirrorbot}}
+          heroku_email: ${{secrets.hakeno217@gmail.com}}
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
           region: "us"
         env:
-          HD_CONFIG_FILE_URL: ${{config.env}}
-
+          HD_AUTO_DELETE_MESSAGE_DURATION: ${{secrets.-1}}
+          HD_BASE_URL_OF_BOT: ${{secrets.BASE_URL_OF_BOT}}
+          HD_BOT_TOKEN: ${{secrets.1624367883:AAH0rvP56aVBcCYIpac77rdsrw8zzdKWBw8}}
+          HD_DOWNLOAD_DIR: ${{secrets./usr/src/app/downloads}}
+          HD_DOWNLOAD_STATUS_UPDATE_INTERVAL: ${{secrets.5}}
+          HD_IS_TEAM_DRIVE: ${{secrets.IS_TEAM_DRIVE}}
+          HD_OWNER_ID: ${{secrets.1492460235}}
+          HD_TELEGRAM_API: ${{secrets.2435123}}
+          HD_TELEGRAM_HASH: ${{secrets.865b1947fec07a49c72719763d2ef279}}
+          HD_UPSTREAM_REPO: ${{secrets.https://github.com/Satriouz/akeno-mirrorbot}}
+          HD_UPSTREAM_BRANCH: ${{master}}
